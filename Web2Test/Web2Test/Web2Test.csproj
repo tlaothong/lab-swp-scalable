@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -174,9 +176,18 @@
     <Compile Include="CategoryPage.aspx.designer.cs">
       <DependentUpon>CategoryPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ComplexQueryPage.aspx.cs">
+      <DependentUpon>ComplexQueryPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComplexQueryPage.aspx.designer.cs">
+      <DependentUpon>ComplexQueryPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\TextController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -205,6 +216,27 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>SampleDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCategory.cs">
+      <DependentUpon>SampleDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SampleDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SampleDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SampleDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SampleDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SampleDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SampleDataModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="ProductPage.aspx.cs">
       <DependentUpon>ProductPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,6 +256,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CategoryPage.aspx" />
+    <Content Include="ComplexQueryPage.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -233,9 +266,26 @@
     <Content Include="HelloPage.aspx" />
     <Content Include="Lipsum5.aspx" />
     <Content Include="Lipsum9.aspx" />
+    <Content Include="Models\SampleDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SampleDataModel.edmx</DependentUpon>
+      <LastGenOutput>SampleDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\SampleDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SampleDataModel.edmx</DependentUpon>
+      <LastGenOutput>SampleDataModel.cs</LastGenOutput>
+    </Content>
     <Content Include="ProductPage.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\SampleDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SampleDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\SampleDataModel.edmx.diagram">
+      <DependentUpon>SampleDataModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -285,6 +335,16 @@
     <Content Include="Views\Text\Lipsum5.cshtml" />
     <Content Include="Views\Text\Lipsum9.cshtml" />
     <Content Include="Site.Master" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
+    <Content Include="Views\Categories\Create.cshtml" />
+    <Content Include="Views\Categories\Delete.cshtml" />
+    <Content Include="Views\Categories\Details.cshtml" />
+    <Content Include="Views\Categories\Edit.cshtml" />
+    <Content Include="Views\Categories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -296,6 +356,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
