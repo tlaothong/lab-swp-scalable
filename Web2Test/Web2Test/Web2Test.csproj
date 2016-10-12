@@ -185,6 +185,8 @@
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\CCategoriesController.cs" />
+    <Compile Include="Controllers\CProductsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -237,6 +239,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SampleDataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="MoreComplexQueryPage.aspx.cs">
+      <DependentUpon>MoreComplexQueryPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoreComplexQueryPage.aspx.designer.cs">
+      <DependentUpon>MoreComplexQueryPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ProductPage.aspx.cs">
       <DependentUpon>ProductPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -276,6 +285,7 @@
       <DependentUpon>SampleDataModel.edmx</DependentUpon>
       <LastGenOutput>SampleDataModel.cs</LastGenOutput>
     </Content>
+    <Content Include="MoreComplexQueryPage.aspx" />
     <Content Include="ProductPage.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -345,6 +355,16 @@
     <Content Include="Views\Categories\Details.cshtml" />
     <Content Include="Views\Categories\Edit.cshtml" />
     <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\CProducts\Create.cshtml" />
+    <Content Include="Views\CProducts\Delete.cshtml" />
+    <Content Include="Views\CProducts\Details.cshtml" />
+    <Content Include="Views\CProducts\Edit.cshtml" />
+    <Content Include="Views\CProducts\Index.cshtml" />
+    <Content Include="Views\CCategories\Create.cshtml" />
+    <Content Include="Views\CCategories\Delete.cshtml" />
+    <Content Include="Views\CCategories\Details.cshtml" />
+    <Content Include="Views\CCategories\Edit.cshtml" />
+    <Content Include="Views\CCategories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
