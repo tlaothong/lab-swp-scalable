@@ -176,6 +176,13 @@
     <Compile Include="CategoryPage.aspx.designer.cs">
       <DependentUpon>CategoryPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CCatPage.aspx.cs">
+      <DependentUpon>CCatPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CCatPage.aspx.designer.cs">
+      <DependentUpon>CCatPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ComplexQueryPage.aspx.cs">
       <DependentUpon>ComplexQueryPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -191,6 +198,13 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\TextController.cs" />
+    <Compile Include="CProductPage.aspx.cs">
+      <DependentUpon>CProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CProductPage.aspx.designer.cs">
+      <DependentUpon>CProductPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -265,9 +279,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CategoryPage.aspx" />
+    <Content Include="CCatPage.aspx" />
     <Content Include="ComplexQueryPage.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="CProductPage.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -308,6 +324,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="StaticCat.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
